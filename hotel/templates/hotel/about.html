@@ -1,0 +1,308 @@
+{% extends 'hotel/index.html' %}
+
+{% load static %}
+
+{% block bodystyle %}
+<body>
+{% endblock bodystyle%}
+
+{% block headerstyle %}
+<div id="sticky-header" class="menu-area menu-style-three menu-style-four transparent-header">
+{% endblock headerstyle %}
+
+{% block headeraction_ul%}
+<ul>
+    <li><a href="#">En</a></li>
+    <li><a href="#">Fn</a></li>
+    <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
+    <!-- <li class="header-btn"><a href="room-details.html" class="btn">book <span>now</span></a></li> -->
+</ul>
+{% endblock headeraction_ul%}
+
+{% block breadcrumb %}
+ <!-- breadcrumb-area -->
+ <section class="breadcrumb-area breadcrumb-bg" style="background-image:url('{% static 'hotel/assets/img/bg/breadcrumb_bg_about.jpg' %}')">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="breadcrumb-content">
+                    <h2 class="title">about us</h2>
+                    <p>Maximum luxury guaranteed </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'hotel:home' %}">home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">about us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb-area-end -->
+{% endblock breadcrumb %}
+
+
+{% block about %}
+<section class="about-area inner-about pt-120">
+    <div class="about-shape"></div>
+    <div class="about-shape-two"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <div class="section-title mb-25">
+                        <span class="sub-title">Special Offers</span>
+                        <h2 class="title black-title">Welcome to Vintage Nest Hotels</h2>
+                    </div>
+                    <p>Vintage Nest stands out like a rose amidst tulips on Ilo-Awela road, Ota. 
+                        It stands out not just in structure but in its growing reputation as the 
+                        benchmark of excellent hospitality services in and around Ota. 
+                        The homely fragrance of its ambience and the royal treatment it metes 
+                        to its clients tells it all.</p>
+                        <p>From its gate you are ushered into the warm reception of the porters 
+                            who bear your luggage, then the receptionists whose priority is your care and comfort, 
+                            and subsequently, the waiters that treat you to vintage services in the most 
+                            courteous manner. <br /> We say, Welcome Home!!
+                            </p>
+                    <div class="about-content-bottom">
+                        <div class="reservation">
+                            <div class="icon">
+                                <img src="{% static 'hotel/assets/img/icon/reservation_icon.png' %}" alt="">
+                            </div>
+                            <div class="content">
+                                <h4 class="title black-title">Reservation</h4>
+                                <a href="#">+234 809 988 8861 </a>
+                            </div>
+                        </div>
+                        <div class="social">
+                            <span>stay tuned</span>
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-10">
+                <div class="about-img">
+                    <img src="{% static 'hotel/assets/img/images/about_img05.jpg' %}" alt="">
+                    <img src="{% static 'hotel/assets/img/images/about_img06.jpg' %}" alt="" class="img-two">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about-area-end -->
+
+<!-- counter-area -->
+<div class="counter-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="counter-item">
+                    <span class="title">1658</span>
+                    <span class="count odometer" data-count="1658"></span>
+                    <p>HAPPY <br> CLIENTS</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="counter-item">
+                    <span class="title">9</span>
+                    <span class="count odometer" data-count="9"></span>
+                    <p>YEARS OF <br> EXPERIENCE</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="counter-item">
+                    <span class="title">15</span>
+                    <span class="count odometer" data-count="15"></span>
+                    <p>awards <br> winning</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="counter-item">
+                    <span class="title">25</span>
+                    <span class="count odometer" data-count="25"></span>
+                    <p>hotel <br> membership</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- counter-area-end -->
+
+<!-- spa-center-area -->
+<section class="spa-center-area spa-center-style-two">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-5 col-md-6">
+                <div class="spa-img">
+                    <img src="{% static 'hotel/assets/img/images/spa_img02.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-7 col-md-6">
+                <div class="spa-content">
+                    <div class="section-title">
+                        <img src="{% static 'hotel/assets/img/icon/section_title_icon02.png' %}" alt="">
+                        <span class="sub-title">DISCOVER Vintage Nest  HOTELS</span>
+                        <h2 class="title">Paulazzio Lounge </h2>
+                    </div>
+                    <p>It may be that you are in the mood to frolic, Paulazzio Lounge offers you the 
+                        ambience and supplies the right music that will make you want to hit the dance floor.<br />
+                        In all of this, you can rest assured that Vintage Nest got you covered. 
+                        
+                    <ul>
+                        <li><i class="flaticon-flower"></i>Bakery</li>
+                        <li><i class="flaticon-flower"></i>Event Hall</li>
+                        <li><i class="flaticon-flower"></i>RELAXATION ROOM</li>
+                        <li><i class="flaticon-flower"></i>Bar & Drinks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- spa-center-area-end -->
+
+<!-- video-area -->
+<div class="video-area-two pt-120">
+    <div class="container">
+        <div class="video-inner">
+            <div class="video-bg">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="paly-icon">
+                            <a href="https://www.youtube.com/watch?v=s1FXjvebvRA" class="paly-btn popup-video pulse"><i class="flaticon-play-button-arrowhead"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- video-area-end -->
+
+<!-- pricing-area -->
+<section class="pricing-area pt-110 pb-90">
+    <div class="container">
+        <div class="pricing-inner">
+            <div class="row align-items-center mb-55">
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h2 class="title black-title">Welcome to our flexible pricing plans</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="pricing-top-content">
+                        <p>With exceptional service provided by friendly and dedicated staff, you will experience the epitome of timeless glamour.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-wrap">
+                <div class="row justify-content-center">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="pricing-item">
+                            <h3 class="pricing-title black-title">V.Basic Card</h3>
+                            <div class="pricing-price">
+                                <span>$</span>
+                                <h2 class="title">29</h2>
+                                <p>/ month</p>
+                            </div>
+                            <div class="pricing-list mb-40">
+                                <ul>
+                                    <li><i class="flaticon-check-mark"></i>Save up to 20% on Vintage Nest </li>
+                                    <li><i class="flaticon-check-mark"></i>Indulgent breakfast</li>
+                                    <li><i class="flaticon-check-mark"></i>World Class Butler Service</li>
+                                    <li><i class="flaticon-check-mark"></i>Luxurious Bathroom</li>
+                                    <li><i class="flaticon-check-mark"></i>Your Special Moments</li>
+                                    <li><i class="flaticon-check-mark"></i>Talise Spal</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-btn">
+                                <a href="contact.html" class="btn">buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="pricing-item">
+                            <h3 class="pricing-title black-title">V.Silver Card</h3>
+                            <div class="pricing-price">
+                                <span>$</span>
+                                <h2 class="title">35</h2>
+                                <p>/ month</p>
+                            </div>
+                            <div class="pricing-list mb-40">
+                                <ul>
+                                    <li><i class="flaticon-check-mark"></i>Save up to 20% on Vintage Nest </li>
+                                    <li><i class="flaticon-check-mark"></i>Indulgent breakfast</li>
+                                    <li><i class="flaticon-check-mark"></i>World Class Butler Service</li>
+                                    <li><i class="flaticon-check-mark"></i>Luxurious Bathroom</li>
+                                    <li><i class="flaticon-check-mark"></i>Your Special Moments</li>
+                                    <li><i class="flaticon-check-mark"></i>Talise Spal</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-btn">
+                                <a href="contact.html" class="btn">buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="pricing-item active">
+                            <h3 class="pricing-title black-title">V.Platinum Card</h3>
+                            <div class="pricing-price">
+                                <span>$</span>
+                                <h2 class="title">59</h2>
+                                <p>/ month</p>
+                            </div>
+                            <div class="pricing-list mb-40">
+                                <ul>
+                                    <li><i class="flaticon-check-mark"></i>Save up to 20% on Vintage Nest </li>
+                                    <li><i class="flaticon-check-mark"></i>Indulgent breakfast</li>
+                                    <li><i class="flaticon-check-mark"></i>World Class Butler Service</li>
+                                    <li><i class="flaticon-check-mark"></i>Luxurious Bathroom</li>
+                                    <li><i class="flaticon-check-mark"></i>Your Special Moments</li>
+                                    <li><i class="flaticon-check-mark"></i>Talise Spal</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-btn">
+                                <a href="contact.html" class="btn">buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="pricing-item">
+                            <h3 class="pricing-title black-title">V.Gold Card</h3>
+                            <div class="pricing-price">
+                                <span>$</span>
+                                <h2 class="title">69</h2>
+                                <p>/ month</p>
+                            </div>
+                            <div class="pricing-list mb-40">
+                                <ul>
+                                    <li><i class="flaticon-check-mark"></i>Save up to 20% on Vintage Nest </li>
+                                    <li><i class="flaticon-check-mark"></i>Indulgent breakfast</li>
+                                    <li><i class="flaticon-check-mark"></i>World Class Butler Service</li>
+                                    <li><i class="flaticon-check-mark"></i>Luxurious Bathroom</li>
+                                    <li><i class="flaticon-check-mark"></i>Your Special Moments</li>
+                                    <li><i class="flaticon-check-mark"></i>Talise Spal</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-btn">
+                                <a href="contact.html" class="btn">buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- pricing-area-end -->
+
+{% endblock about %}

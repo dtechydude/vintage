@@ -1,0 +1,27 @@
+{% extends "users/login.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Cancel Booking " %}{% endblock %}
+
+{% block content_form %}
+<div>
+  <ul>
+    <li><a href="{% url 'hotel:BookingListView' %}">Go back to my bookings</a></li>
+
+  </ul>
+</div>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <h4>Are you sure you want to cancel this booking? </h4> <b>{{ booking.room.number}} - {{ booking.get_room_category}} </b>
+        <br /> <i>{{booking}}?</i>
+    <!-- <button type="submit">Cancel Booking</button> -->
+    <button class=" btn btn-primary btn-block" type="submit">{% trans "Yes! Cancel Booking" %} </button>
+    <hr><div class="container"><h5><a href="{% url 'hotel:BookingListView' %}">>>No! don't cancel my bookings</a></h5></div>
+
+
+</form>
+
+
+{% endblock content_form %}

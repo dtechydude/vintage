@@ -1,0 +1,267 @@
+{% extends 'hotel/index.html' %}
+{% load static %}
+
+{% block bodystyle %}
+<body>
+{% endblock bodystyle%}
+
+{% block headerstyle %}
+<div id="sticky-header" class="menu-area menu-style-three menu-style-four transparent-header">
+{% endblock headerstyle %}
+
+{% block headeraction_ul%}
+<ul>
+    <li><a href="#">En</a></li>
+    <li><a href="#">Fn</a></li>
+    <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
+    <!-- <li class="header-btn"><a href="room-details.html" class="btn">book <span>now</span></a></li> -->
+</ul>
+{% endblock headeraction_ul%}
+
+{% block breadcrumb %}
+ <!-- breadcrumb-area -->
+ <section class="breadcrumb-area breadcrumb-bg" style="background-image:url('{% static 'hotel/assets/img/bg/breadcrumb_bg_contactus.jpg' %}')">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="breadcrumb-content">
+                    <h2 class="title">Contact Us</h2>
+                    <p>Reservations, Enquiries, Others.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'hotel:home' %}">home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb-area-end -->
+{% endblock breadcrumb %}
+<!--message for successful sumbission of contact form-->
+
+<!-- end message for successful sumbission of contact form-->
+
+{% block about %}
+<div>
+    {% if message_name %}
+<center style="padding:30px";>
+    <h3 style="color:black">Thanks {{ message_name }}!</h3>we received your email and will respond shortly.
+    
+</center>
+
+</div>
+
+{% else %}
+<section class="contact-area pt-115 pb-120">
+    <div class="container">
+        <div class="contact-inner">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-title text-center mb-60">
+                        <span class="sub-title">our locations</span>
+                        <h2 class="title black-title">Our Address Near You</h2>
+                    </div>
+                </div>
+            </div>
+          
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="contact-info">
+                        <div class="top-content">
+                            <div class="icon">
+                                <i class="flaticon-pin"></i>
+                            </div>
+                            <h3 class="title black-title">Vintage Nest Hotels</h3>
+                        </div>
+                        <div class="contact-content">
+                            <p>144, Ilo Awela road, Ota<span>Email: info@vintagenesthotels.com</span> Ph: : +234 809 988 8861 </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="contact-info">
+                        <div class="top-content">
+                            <div class="icon">
+                                <i class="flaticon-pin"></i>
+                            </div>
+                            <h3 class="title black-title">Vintage Bakery</h3>
+                        </div>
+                        <div class="contact-content">
+                            <p>144, Ilo Awela road, Ota <span> Email: info@vintagenesthotels.com</span> Ph: : +234 809 988 8861 </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="contact-info">
+                        <div class="top-content">
+                            <div class="icon">
+                                <i class="flaticon-pin"></i>
+                            </div>
+                            <h3 class="title black-title">Laundary Service</h3>
+                        </div>
+                        <div class="contact-content">
+                            <p>144, Ilo Awela road, Ota <span>Email: info@vintagenesthotels.com</span> : +234 809 988 8861 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- contact-map -->
+            <div id="contact-map">
+                <iframe 
+                src="https://maps.google.com/maps?q=vintage%20nest%20hotels%20ota&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <!-- contact-map-end -->
+        </div>
+        <div class="contact-form">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-10">
+                    <h2 class="title black-title">contact Us</h2>
+                    <form action="{% url 'hotel:contact-us' %}" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-grp">
+                                    <input type="text" name="message-name" placeholder="your name *">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-grp">
+                                    <input type="email" name="message-email" placeholder="your email *">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-grp">
+                                    <input type="text" name="message-subject" placeholder="subject">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-grp">
+                                    <input type="number" name="message-mobile" placeholder="your mobile">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-grp">
+                            <textarea name="message" name="message" placeholder="message"></textarea>
+                        </div>
+                        <div class="submit-btn text-center">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</section>
+<!-- pricing-area-end -->
+
+{% endblock about %}
+<!-- footer area-->
+{% block footer %}
+<footer>
+    <div class="footer-area footer-style-three">
+        <div class="footer-top footer-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-5 col-md-6">
+                        <div class="footer-widget mb-30">
+                            <div class="footer-logo">
+                                <img src="assets/img/logo/logo.png" alt="">
+                            </div>
+                            <div class="footer-content">
+                                <p>With exceptional service provided by friendly and dedicated staff, you will experience the epitome of timeless glamour.</p>
+                                <span>E-mail: <a href="#">info@vintagenesthotels.com</a></span>
+                            </div>
+                            <div class="footer-contact">
+                                <div class="icon">
+                                    <i class="fa-solid fa-headphones-simple"></i>
+                                </div>
+                                <div class="content">
+                                    <a href="#">: +234 809 988 8861 </a>
+                                    <p>Call Now</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="footer-widget mb-30">
+                            <h4 class="title">Clientele</h4>
+                            <ul class="footer-link">
+                                <li><a href="#">SPDC</a></li>
+                                <li><a href="#">WAPCO</a></li>
+                                <li><a href="#">Nestle Nigeria Plc</a></li>
+                              
+                                <li><a href="#">SFH NIGERIA</a></li>
+                                <li><a href="#">Neo Plastic Company</a></li>
+                                <li><a href="#">Fidelity Bank</a></li>
+                                <li><a href="#">Access Bank</a></li>
+                                <li><a href="#">Zenith Bank</a></li>
+                                <li><a href="#">Poly Products Nig Ltd.</a></li>
+                                <li><a href="#">Sona Agro Allied Foods</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-7 col-md-8">
+                        <div class="footer-widget mb-30">
+                            <h4 class="title">Newsletter</h4>
+                            <div class="footer-newsletter">
+                                <form action="#">
+                                    <input type="email" placeholder="Enter Your Email...">
+                                    <button type="submit"><i class="flaticon-paper-plane"></i></button>
+                                </form>
+                                <ul class="social">
+                                    <li><a href="https://www.instagram.com/vintagenestng/"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://www.twitter.com/vintagenestng/"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="https://www.facebook.com/vintagenestng/"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="https://wa.me/+2348099888863?text=I'm%20inquiring%20about%20the%20hotel%20bookings"><i class="fa-brands fa-whatsapp"></i></a></li>
+
+                                </ul>
+                                <form action="#" class="checkbox">
+                                    <input type="checkbox" id="checkbox">
+                                    <label for="checkbox">I agree to all terms and policies</label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="copyright-text">
+                            <p>| Copyright © 2022 <a href="#">Vintage Nest Hotels</a>. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <!-- <div class="col-sm-4">
+                        <div class="footer-lang text-end">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" data-bs-toggle="dropdown">
+                                    <img src="assets/img/icon/united-states.png" alt=""> English
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="index.html"><img src="assets/img/icon/russia.png"
+                                            alt="">Russia</a>
+                                    <a class="dropdown-item" href="index.html"><img src="assets/img/icon/thailand.png"
+                                            alt="">Thailand</a>
+                                    <a class="dropdown-item" href="index.html"><img src="assets/img/icon/india.png"
+                                            alt="">India</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock footer %}

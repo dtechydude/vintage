@@ -1,0 +1,381 @@
+{% extends 'hotel/index.html' %}
+{% load static %}
+
+{% block bodystyle %}
+<body>
+{% endblock bodystyle%}
+
+{% block headerstyle %}
+<div id="sticky-header" class="menu-area menu-style-three menu-style-four transparent-header">
+{% endblock headerstyle %}
+
+{% block headeraction_ul%}
+<ul>
+    <li><a href="#">En</a></li>
+    <li><a href="#">Fn</a></li>
+    <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
+    <!-- <li class="header-btn"><a href="room-details.html" class="btn">book <span>now</span></a></li> -->
+</ul>
+{% endblock headeraction_ul%}
+
+{% block breadcrumb %}
+ <!-- breadcrumb-area -->
+            <!-- breadcrumb-area -->
+            <section class="breadcrumb-area breadcrumb-bg" style="background-image:url({% static 'hotel/assets/img/bg/breadcrumb_bg_room.jpg' %})" >
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <div class="breadcrumb-content">
+                                <h2 class="title">our rooms</h2>
+                                <p>welcome to paradise</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="{% url 'hotel:home' %}">home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Our Rooms</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- breadcrumb-area-end -->
+            {% endblock breadcrumb %}
+
+            <!-- room-area -->
+
+            {% block about %}
+           
+             <section class="room-area">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center mb-60">
+                        <div class="col-lg-6">
+                            <div class="section-title">
+                                <h2 class="title black-title">Availability and Rates</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-10">
+                            <div class="room-content-top">
+                                <i class="flaticon-sun"></i>
+                                <p><span>Book with peace of mind</span> Cancel your reservation up to 48 hours before check-in for a full refund</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 col-md-10">
+                            <div class="room-item wow fadeInUp"  data-wow-delay=".4s">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-5">
+                                        <div class="room-thumb">
+                                            <div class="room-active-two">
+                                                <img src="{% static 'hotel/assets/img/room/classic_nest1.jpg' %}" alt="">
+                                                <img src="{% static 'hotel/assets/img/room/classic_nest2.jpg' %}" alt="">
+                                                <img src="{% static 'hotel/assets/img/room/classic_nest3.jpg' %}" alt="">
+                                               
+                                            </div>
+                                            <a href="#" class="room-gallery"><i class="flaticon-picture"></i>4</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="room-content">
+                                            <div class="content-top">
+                                                <h3 class="title black-title"><a href="classic_nest.html">Classic Nest</a></h3>
+                                                <!-- <p class="price"><span>USD $150</span>Day price</p> -->
+                                            </div>
+                                            <div class="room-facilities">
+                                                <ul>
+                                                    <li><i class="flaticon-double-bed"></i>Single Bed</li>
+                                                    <li><i class="flaticon-sofa-2"></i>2 Guest</li>
+                                                    <li><i class="flaticon-bathtub-1"></i>1 Bathroom</li>
+                                                    <li><i class="flaticon-fullscreen"></i>89 Sq ft</li>
+                                                </ul>
+                                            </div>
+                                            <div class="content-bottom">
+                                                <div class="row align-items-end">
+                                                    <div class="col-md-8">
+                                                        <div class="room-features">
+                                                            <h5 class="title">Features</h5>
+                                                            <ul>
+                                                                <li>Work Desk</li>
+                                                                <li>Air conditioning</li>
+                                                                <li>Direct Dial Telephone</li>
+                                                                <li>Cable TV</li>
+                                                                <li>Wifi</li>
+                                                                <li>Wardrobe</li>
+                                                                <li>Free toiletries</li>
+                                                                <li>Comp. Bottled Water</li>
+                                                                <li>Refrigerator</li>
+                                                                <li>Breakfast included</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="room-details-btn text-end">
+                                                            <a href="classic_nest.html" class="btn">SELECT DATES</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="room-item wow fadeInUp"  data-wow-delay=".4s">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-5">
+                                        <div class="room-thumb">
+                                            <div class="room-active-two">
+                                            <img src="{% static 'hotel/assets/img/room/executive_nest1.jpg' %}" alt="">
+                                            <img src="{% static 'hotel/assets/img/room/executive_nest2.jpg' %}" alt="">
+                                            <img src="{% static 'hotel/assets/img/room/executive_nest3.jpg' %}" alt="">
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="room-content">
+                                            <div class="content-top">
+                                                <h3 class="title black-title"><a href="executive_nest.html">Executive Nest</a></h3>
+                                                <!-- <p class="price"><span>USD $150</span>Day price</p> -->
+                                            </div>
+                                            <div class="room-facilities">
+                                                <ul>
+                                                    <li><i class="flaticon-double-bed"></i>2 Bedroom</li>
+                                                    <li><i class="flaticon-sofa-2"></i>4 Guest</li>
+                                                    <li><i class="flaticon-bathtub-1"></i>1 Bathroom</li>
+                                                    <li><i class="flaticon-fullscreen"></i>89 Sq ft</li>
+                                                </ul>
+                                            </div>
+                                            <div class="content-bottom">
+                                                <div class="row align-items-end">
+                                                    <div class="col-md-8">
+                                                        <div class="room-features">
+                                                            <h5 class="title">Features</h5>
+                                                            <ul>
+                                                                <li>Twin bed</li>
+                                                                <li>Air conditioning</li>
+                                                                <li>Television</li>
+                                                                <li>Cable TV</li>
+                                                                <li>Streaming device</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="room-details-btn text-end">
+                                                            <a href="executive_nest.html" class="btn">SELECT DATES</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="room-item wow fadeInUp"  data-wow-delay=".4s">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-5">
+                                        <div class="room-thumb">
+                                            <div class="room-active-two">
+                                            <img src="{% static 'hotel/assets/img/room/super_nest1.jpg' %}" alt="">
+                                            <img src="{% static 'hotel/assets/img/room/super_nest2.jpg' %}" alt="">
+                                            <img src="{% static 'hotel/assets/img/room/super_nest3.jpg' %}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="room-content">
+                                            <div class="content-top">
+                                                <h3 class="title black-title"><a href="super_nest.html">Super Nest</a></h3>
+                                                <!-- <p class="price"><span>USD $150</span>Day price</p> -->
+                                            </div>
+                                            <div class="room-facilities">
+                                                <ul>
+                                                    <li><i class="flaticon-double-bed"></i>2 Bedroom</li>
+                                                    <li><i class="flaticon-sofa-2"></i>4 Guest</li>
+                                                    <li><i class="flaticon-bathtub-1"></i>1 Bathroom</li>
+                                                    <li><i class="flaticon-fullscreen"></i>89 Sq ft</li>
+                                                </ul>
+                                            </div>
+                                            <div class="content-bottom">
+                                                <div class="row align-items-end">
+                                                    <div class="col-md-8">
+                                                        <div class="room-features">
+                                                            <h5 class="title">Features</h5>
+                                                            <ul>
+                                                                <li>Twin bed</li>
+                                                                <li>Air conditioning</li>
+                                                                <li>Television</li>
+                                                                <li>Cable TV</li>
+                                                                <li>Streaming device</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="room-details-btn text-end">
+                                                            <a href="super_nest.html" class="btn">SELECT DATES</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="room-item wow fadeInUp"  data-wow-delay=".4s">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-5">
+                                        <div class="room-thumb">
+                                            <div class="room-active-two">
+                                            <img src="{% static 'hotel/assets/img/room/twin_nest1.jpg' %}" alt="">
+                                            <img src="{% static 'hotel/assets/img/room/twin_nest2.jpg' %}" alt="">
+                                            <img src="{% static 'hotel/assets/img/room/twin_nest3.jpg' %}" alt="">
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="room-content">
+                                            <div class="content-top">
+                                                <h3 class="title black-title"><a href="twin_nest.html">Twin Nest</a></h3>
+                                                <!-- <p class="price"><span>USD $150</span>Day price</p> -->
+                                            </div>
+                                            <div class="room-facilities">
+                                                <ul>
+                                                    <li><i class="flaticon-double-bed"></i>2 Bedroom</li>
+                                                    <li><i class="flaticon-sofa-2"></i>4 Guest</li>
+                                                    <li><i class="flaticon-bathtub-1"></i>1 Bathroom</li>
+                                                    <li><i class="flaticon-fullscreen"></i>89 Sq ft</li>
+                                                </ul>
+                                            </div>
+                                            <div class="content-bottom">
+                                                <div class="row align-items-end">
+                                                    <div class="col-md-8">
+                                                        <div class="room-features">
+                                                            <h5 class="title">Features</h5>
+                                                            <ul>
+                                                                <li>Twin bed</li>
+                                                                <li>Air conditioning</li>
+                                                                <li>Television</li>
+                                                                <li>Cable TV</li>
+                                                                <li>Streaming device</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="room-details-btn text-end">
+                                                            <a href="twin_nest.html" class="btn">SELECT DATES</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="room-item wow fadeInUp"  data-wow-delay=".4s">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-5">
+                                        <div class="room-thumb">
+                                            <div class="room-active-two">
+                                                <img src="{% static 'hotel/assets/img/room/royal_nest1.jpg' %}" alt="">
+                                                <img src="{% static 'hotel/assets/img/room/royal_nest2.jpg' %}" alt="">
+                                                <img src="{% static 'hotel/assets/img/room/royal_nest3.jpg' %}" alt="">
+                                           
+                                            </div>
+                                            <a href="#" class="room-gallery"><i class="flaticon-picture"></i>4</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="room-content">
+                                            <div class="content-top">
+                                                <h3 class="title black-title"><a href="royal_nest.html">Royal Nest</a></h3>
+                                                <!-- <p class="price"><span>USD $150</span>Day price</p> -->
+                                            </div>
+                                            <div class="room-facilities">
+                                                <ul>
+                                                    <li><i class="flaticon-double-bed"></i>2 Bedroom</li>
+                                                    <li><i class="flaticon-sofa-2"></i>4 Guest</li>
+                                                    <li><i class="flaticon-bathtub-1"></i>1 Bathroom</li>
+                                                    <li><i class="flaticon-fullscreen"></i>89 Sq ft</li>
+                                                </ul>
+                                            </div>
+                                            <div class="content-bottom">
+                                                <div class="row align-items-end">
+                                                    <div class="col-md-8">
+                                                        <div class="room-features">
+                                                            <h5 class="title">Features</h5>
+                                                            <ul>
+                                                                <li>Twin bed</li>
+                                                                <li>Air conditioning</li>
+                                                                <li>Television</li>
+                                                                <li>Cable TV</li>
+                                                                <li>Streaming device</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="room-details-btn text-end">
+                                                            <a href="royal_nest.html" class="btn">SELECT DATES</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-xl-12 col-md-10">
+                            <div class="pagination-wrap">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Prev <i class="fa-solid fa-angles-left"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-right"></i>Next</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+            <!-- room-area-end -->
+
+        </main>
+        <!-- main-area-end -->
+
+
+        {% for room_category, room_url in room_list %}
+        
+
+        <a href="{{room_url}}">Go to room</a>
+        <p>{{room_category}}</p>
+        <p>{{room_number}}</p>
+
+        {% endfor %}
+
+
+        <!-- logic for room list-->
+        <!-- <div>
+            {% for room in room_list %}
+            <p>{{room}}</p>
+            {% endfor %}
+
+        </div>
+                         -->
+
+
+
+
+        {% endblock about %}
+
+        <!-- footer-area -->
+      
+        <!-- footer-area-end -->
+
+     

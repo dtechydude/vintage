@@ -1,0 +1,33 @@
+{% extends "users/login.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Cancel Booking " %}{% endblock %}
+
+{% block content_form %}
+<div>
+  <ul>
+    <li><a href="{% url 'hotel:BookingListView' %}">Go back to my bookings</a></li>
+
+  </ul>
+</div>
+
+
+    <h4>How to make payment! </h4> 
+    <p> Please make all payment directly to Vintage Nest Hotels.
+        information (Bank: Name:)
+    </p>
+    <p>After you make payment please send message in the following format:</p>
+    <p> Account Name: <br />
+        Account Number: <br />
+        Payment Date: <br />
+        Purpose: <br />
+    </p>
+    <p><b>Send Email to:</b> <br />info@vintagenesthotels.com. or <br />
+        <div class="social-links"><b>Whatsapp:
+        <a href="https://wa.me/+2348099888863?text=I'm%20inquiring%20about%20the%20hotel%20bookings"><i class="fa-brands fa-whatsapp"></i></a>
+            </b></div>
+    </b> +234 809 988 8863</p>
+  
+
+{% endblock content_form %}

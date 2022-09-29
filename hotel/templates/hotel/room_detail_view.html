@@ -1,0 +1,713 @@
+{% extends 'hotel/index.html' %}
+{% load static %}
+
+{% block bodystyle %}
+<body>
+{% endblock bodystyle%}
+
+{% block headerstyle %}
+<div id="sticky-header" class="menu-area menu-style-three menu-style-four transparent-header">
+{% endblock headerstyle %}
+
+
+{% block headeraction_ul%}
+<ul>
+    <li><a href="#">En</a></li>
+    <li><a href="#">Fn</a></li>
+    <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
+    <!-- <li class="header-btn"><a href="room-details.html" class="btn">book <span>now</span></a></li> -->
+</ul>
+{% endblock headeraction_ul %}
+
+{% block breadcrumb %}
+
+ <!-- breadcrumb-area -->
+ {% if room_category == 'CLASSIC-NEST' %}
+ <section class="breadcrumb-area breadcrumb-bg" style="background-image:url('{% static 'hotel/assets/img/bg/breadcrumb_bg_classicnest.jpg' %}')">
+    {% elif room_category == 'SUPER-NEST'  %}
+    <section class="breadcrumb-area breadcrumb-bg" style="background-image:url('{% static 'hotel/assets/img/bg/breadcrumb_bg_supernest.jpg' %}')">
+        {% elif room_category == 'EXECUTIVE-NEST'  %}
+    <section class="breadcrumb-area breadcrumb-bg" style="background-image:url('{% static 'hotel/assets/img/bg/breadcrumb_bg_executivenest.jpg' %}')">
+        {% elif room_category == 'TWIN-NEST'  %}
+    <section class="breadcrumb-area breadcrumb-bg" style="background-image:url('{% static 'hotel/assets/img/bg/breadcrumb_bg_twinnest.jpg' %}')">
+        {% else %}
+    <section class="breadcrumb-area breadcrumb-bg" style="background-image:url('{% static 'hotel/assets/img/bg/breadcrumb_bg_royalnest.jpg' %}')">
+
+    {% endif %}
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="breadcrumb-content">
+                    <h2 class="title">{{room_category}}</h2>
+                    <p>explore vintage room</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'hotel:home' %}">home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Room Detail</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb-area-end -->
+{% endblock breadcrumb %}
+
+
+        {% block about %}
+            <!-- room-area -->
+            <section class="room-details-area pt-120 pb-120">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8">
+                            <div class="room-details-thumb">
+
+             <!-- ROOM CLASSIC NEST-->
+            {% if room_category == 'CLASSIC-NEST' %}
+                                <img src="{% static 'hotel/assets/img/room/room_det_classic01.jpg' %}" alt="">
+                                <ul>
+                                    <li class="more"><a href="#">more <i class="flaticon-right"></i></a></li>
+                                    <li class="expand"><a href="{% static 'hotel/assets/img/room/room_det_classic02.jpg' %}" class="popup-image">Expand <i class="flaticon-full-size"></i></a></li>
+
+                                </ul>
+                            </div>
+                            <div class="room-details-content">
+                                <div class="content-top">
+                                    <div class="left-side">
+                                        <span class="type">room type </span>
+                                        <h2 class="title black-title">Vintage "{{room_category}}"</h2>
+                                        <ul>
+                                            <li>People <span>2</span></li>
+                                            <li>bed(s) <span>1 King</span></li>
+                                            <li>Rate <span>N20,000</span></li>
+                                            <li>view <span>vintage</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="promo-code">
+                                        <p>Promo code <span>vintage <br> 0822</span></p>
+                                    </div>
+                                </div>
+                                <p>This room affords you the luxury that comes with all other rooms whilst on a budget.
+                                    <br />Enjoy the sights and sounds of the city of Ota from the balcony while also enjoying some fresh air.<br />
+                                    You’ll notice it the instant you walk in – the attention to detail and the effort we made to meet your needs and requirements.
+                                    </p>
+                            </div>
+                            <div class="ideal-room">
+                                <span class="title">ideal for</span>
+                                <ul>
+                                    <li><a href="#">Honeymoon</a></li>
+                                    <li><a href="#">couples</a></li>
+                                    <li><a href="#">Time Out</a></li>
+                                </ul>
+                            </div>
+                            <!-- END CLASSIC NEST DETAIL-->
+
+
+ <!-- ROOM SUPER NEST-->
+            {% elif room_category == 'SUPER-NEST' %}
+                                <img src="{% static 'hotel/assets/img/room/room_det_super01.jpg' %}" alt="">
+                                <ul>
+                                    <li class="more"><a href="#">more <i class="flaticon-right"></i></a></li>
+                                    <li class="expand"><a href="{% static 'hotel/assets/img/room/room_det_super02.jpg' %}" class="popup-image">Expand <i class="flaticon-full-size"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="room-details-content">
+                                <div class="content-top">
+                                    <div class="left-side">
+                                        <span class="type">room type </span>
+                                        <h2 class="title black-title">Vintage "{{room_category}}"</h2>
+                                        <ul>
+                                            <li>People <span>2</span></li>
+                                            <li>bed(s) <span>1 King</span></li>
+                                            <li>Rate <span>N25,000</span></li>
+                                            <li>More <span>Max. for 2</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="promo-code">
+                                        <p>Promo code <span>vintage <br> 7022</span></p>
+                                    </div>
+                                </div>
+                                <p>This room outshines all others in numbers. Most suited for people looking to book multiple rooms.
+                                <br />Relax with everything you need to work. And the stress stays outside the door.
+                                </p>
+                            </div>
+                            <div class="ideal-room">
+                                <span class="title">ideal for</span>
+                                <ul>
+                                    <li><a href="#">Honeymoon</a></li>
+                                    <li><a href="#">couples</a></li>
+                                    <li><a href="#">Time Out</a></li>
+                                </ul>
+                            </div>
+
+                              <!--END SUPER NEST DETAIL-->
+
+                <!-- ROOM EXECUTIVE NEST-->
+                    {% elif room_category == 'EXECUTIVE-NEST' %}
+                            <img src="{% static 'hotel/assets/img/room/room_det_exec01.jpg' %}" alt="">
+                            <ul>
+                                <li class="more"><a href="#">more <i class="flaticon-right"></i></a></li>
+                                <li class="expand"><a href="{% static 'hotel/assets/img/room/room_det_exec02.jpg' %}" class="popup-image">Expand <i class="flaticon-full-size"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="room-details-content">
+                            <div class="content-top">
+                                <div class="left-side">
+                                    <span class="type">room type </span>
+                                    <h2 class="title black-title">Vintage "{{room_category}}"</h2>
+                                    <ul>
+                                        <li>People <span>3</span></li>
+                                        <li>bed(s) <span>1 King</span></li>
+                                        <li>Rate <span>N30,000</span></li>
+                                        <li>More <span>2 Adult + 1 Child</span></li>
+                                    </ul>
+                                </div>
+                                <div class="promo-code">
+                                    <p>Promo code <span>vintage <br> 9022</span></p>
+                                </div>
+                            </div>
+                            <p>Spacious and suited with an extra working table and chair, this room is best suited for the business traveller.
+                                Enjoy Complimentary Tea/Coffee while you work or simply unwind
+                                <br />Live a charmed life: generous spacing that invites you to comfortably work, relax and play.
+                                </p>
+                        </div>
+                        <div class="ideal-room">
+                            <span class="title">ideal for</span>
+                            <ul>
+                                <li><a href="#">Honeymoon</a></li>
+                                <li><a href="#">couples</a></li>
+                                <li><a href="#">families</a></li>
+                            </ul>
+                        </div>
+                        <!-- END EXECUTIVE NEST DETAIL-->
+
+        <!-- ROOM TWIN NEST-->
+            {% elif room_category == 'TWIN-NEST' %}
+                    <img src="{% static 'hotel/assets/img/room/room_det_twin01.jpg' %}" alt="">
+                    <ul>
+                        <li class="more"><a href="#">more <i class="flaticon-right"></i></a></li>
+                        <li class="expand"><a href="{% static 'hotel/assets/img/room/room_det_twin02.jpg' %}" class="popup-image">Expand <i class="flaticon-full-size"></i></a></li>
+                    </ul>
+                </div>
+                <div class="room-details-content">
+                    <div class="content-top">
+                        <div class="left-side">
+                            <span class="type">room type </span>
+                            <h2 class="title black-title">Vintage "{{room_category}}"</h2>
+                            <ul>
+                                <li>People <span>4</span></li>
+                                <li>bed(s) <span>2 King</span></li>
+                                <li>Rate <span>N35,000</span></li>
+                                <li>view <span>Vintage</span></li>
+                            </ul>
+                        </div>
+                        <div class="promo-code">
+                            <p>Promo code <span>mountain <br> 3022</span></p>
+                        </div>
+                    </div>
+                    <p>With 2 separate double beds, this is the largest room in this facility
+                        From Complimentary breakfast and complimentary water to toiletries and towels in the bathroom, Everything in this room comes in twos
+                        <br />The moment you close the door behind you is when that just-like-being-at-home-feeling begins:
+                            And it doesn’t matter whether you are on a business trip or underway with the family. Our high-quality furnishings
+                            invite you to feel at home; modern technical equipment, perfect sleeping comfort and a spacious bath -
+                            with all the lovingly chosen details to make your stay in Ota even more wonderful. Typically, VINTAGE.
+
+
+                        </p>
+                </div>
+                <div class="ideal-room">
+                    <span class="title">ideal for</span>
+                    <ul>
+                        <li><a href="#">Honeymoon</a></li>
+                        <li><a href="#">couples</a></li>
+                        <li><a href="#">families</a></li>
+                    </ul>
+                </div>
+                <!--END TWIN NEST DETAIL-->
+
+        <!-- ROOM ROYAL NEST-->
+        {% elif room_category == 'ROYAL-NEST' %}
+                <img src="{% static 'hotel/assets/img/room/room_det_royal01.jpg' %}" alt="">
+                <ul>
+                    <li class="more"><a href="#">more <i class="flaticon-right"></i></a></li>
+                    <li class="expand"><a href="{% static 'hotel/assets/img/room/room_det_royal02.jpg' %}" class="popup-image">Expand <i class="flaticon-full-size"></i></a></li>
+                </ul>
+            </div>
+            <div class="room-details-content">
+                <div class="content-top">
+                    <div class="left-side">
+                        <span class="type">room type </span>
+                        <h2 class="title black-title">Vintage "{{room_category}}"</h2>
+                        <ul>
+                            <li>People <span>3 + 1</span></li>
+                            <li>bed(s) <span>1 King</span></li>
+                            <li>Rate <span>N40,000</span></li>
+                            <li>view <span>vintage</span></li>
+                        </ul>
+                    </div>
+                    <div class="promo-code">
+                        <p>Promo code <span>vintage <br> 4022</span></p>
+                    </div>
+                </div>
+                <p>Located on the top floor of the building, noise from outside is a no worry.
+                    <br />Large enough to take three adults or 2 adults and a child.
+                    With 2 extra pocket chairs, a reading table and tea/coffe making facilty, 52" screen Tv with multiple satelitte channels.
+                    </p>
+                    <p>
+                        <i>“Although it is my job as a hotel room to make sleeping and getting comfortable a pleasant experience, I did not neglect the other functions of a modern hotel room either.
+                        I also have a modern work area with free basic internet access and comfortable pocket chairs to reflect on.
+                        A bottle of mineral water and coffee/tea facilities provide you with energy.
+                        Please come in. I am thrilled to have you as my guest!”</i>
+
+                    </p>
+            </div>
+            <div class="ideal-room">
+                <span class="title">ideal for</span>
+                <ul>
+                    <li><a href="#">Honeymoon</a></li>
+                    <li><a href="#">couples</a></li>
+                    <li><a href="#">families</a></li>
+                </ul>
+            </div>
+            <!-- END ROYAL NEST DETAIL-->
+
+                {% endif %}
+
+
+
+                            <div class="room-amenities">
+                                <span class="title">IN ROOM & OTHER AMENITIES</span>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="amenities-item">
+                                            <div class="amenities-content">
+                                                <div class="content-top">
+                                                    <div class="icon">
+                                                        <i class="flaticon-double-bed"></i>
+                                                    </div>
+                                                    <h4 class="title black-title">Bedroom</h4>
+                                                </div>
+                                                <p>Made comfortable enough for your desire pleasure.
+                                                Our bedsheets and beds accentuate the feelings of comfort and relaxation.
+                                                our staff also ensure that your overall relaxation experience is enhanced.</p>
+                                                <ul>
+                                                    <li>Refrigerator</li>
+                                                    <li>Air-conditioner</li>
+                                                    <li>24/7 Concierge</li>
+                                                    <li>Reading Desk+Chair</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="amenities-item">
+                                            <div class="amenities-content">
+                                                <div class="content-top">
+                                                    <div class="icon">
+                                                        <i class="flaticon-bathtub"></i>
+                                                    </div>
+                                                    <h4 class="title black-title">Bathroom + Others</h4>
+                                                </div>
+                                                <p>Unlike other hotels around, Vintage stands out for its cleanliness and high-quality service,
+                                                our bathrooms are not only clean, but also smell fantastic.
+                                                Many families spend time out here often and the experience is always amazing. </p>
+                                                <ul>
+                                                    <li></li>
+                                                    <li>Walk-in Shower</li>
+                                                    <li>Toiletries</li>
+                                                    <li>WardRobes</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="amenities-item">
+                                            <div class="amenities-content">
+                                                <div class="content-top">
+                                                    <div class="icon">
+                                                        <i class="flaticon-wifi-router"></i>
+                                                    </div>
+                                                    <h4 class="title black-title">Tech.</h4>
+                                                </div>
+                                                <p>At Vintage Nest Hotels, technology is of great importance, from our close circuit Tv to internet enabled system,
+                                                you will definately enjoy your stay here</p>
+                                                <ul>
+                                                    <li>High speed Wi-Fi</li>
+                                                    <li>Full HD Television</li>
+                                                    <li>Telephone</li>
+                                                    <li>Cable/Satellite</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="amenities-item">
+                                            <div class="amenities-content">
+                                                <div class="content-top">
+                                                    <div class="icon">
+                                                        <i class="flaticon-rating"></i>
+                                                    </div>
+                                                    <h4 class="title black-title">Relaxation</h4>
+                                                </div>
+                                                <p>The food and other relaxation attractions here are highly amazing, from the local dishes to
+                                                foreign delicacy. Vintage Nest stands out.</p>
+                                                <ul>
+                                                    <li>Secure Car Park</li>
+                                                    <li>Something Nice</li>
+                                                    <li>Paulazzio Bar</li>
+                                                    <li>Serene Environment</li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <h2 class="title black-title">reviews</h2>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="review-content mb-30">
+                                            <div class="rating">
+                                                <i class="flaticon-star"></i>
+                                                <i class="flaticon-star"></i>
+                                                <i class="flaticon-star"></i>
+                                                <i class="flaticon-star"></i>
+                                                <i class="flaticon-star"></i>
+                                            </div>
+                                            <h2 class="title black-title">You’re definitely going to feel good!</h2>
+                                            <p>This is a beautiful hotel! It’s clean and has very friendly staff that welcome
+                                            and make you feel at home. We came into town for a wedding and it was very stressful
+                                            but coming back to our room was very peaceful. The beddings are so neat, and comfortable.
+                                            And they give light 24hrs, wow. I give it a 10/10.</p>
+                                            <h4 class="title-two black-title">Engr, Justin E.</h4>
+                                            <span>June 2022</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="review-content mb-30">
+                                            <div class="rating">
+                                                <i class="flaticon-star"></i>
+                                                <i class="flaticon-star"></i>
+                                                <i class="flaticon-star"></i>
+                                                <i class="flaticon-star"></i>
+                                                <i class="flaticon-star"></i>
+                                            </div>
+                                            <h2 class="title black-title">I recommend this hotel to anyone visiting Ota</h2>
+                                            <p>A friend recommended this hotel for me. I must say, I do not regret.
+                                            The receptionist was super friendly, the rooms were clean and very comfortable.
+                                            They must be doing something right 'cos their staff seem so happy and are ever willing to help.
+                                            They went over and beyond to help make our stay enjoyable.</p>
+                                            <h4 class="title-two black-title">Mrs. Edunjobi A.</h4>
+                                            <span>March 2022</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-8">
+                            <aside class="room-sidebar">
+                                <h2 class="title black-title">Check <br> Availability</h2>
+                                <p>Book direct for our best rates guaranteed.</p>
+                                <form action="#" method="POST">
+                                    {% csrf_token %}
+                                    <ul>
+                                        <li>
+                                            <div class="form-grp">
+                                                <label for="id_check_in">Check-In:</label>
+                                                <input type="date" placeholder="Check in" name="check_in" required id="id_check_in">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-grp">
+                                                <label for="id_check_out">Check-Out:</label>
+                                                <input type="date" placeholder="Check out" name="check_out" required id="id_check_out">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-grp-two">
+                                                <input type="text"  placeholder="Promo code">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-grp-two">
+                                                <input type="text" placeholder="group code">
+                                            </div>
+                                        </li>
+                                        <!-- <li>
+                                            <div class="form-grp-two select">
+                                                <select class="custom-select" name="room_category" id="id_room_category">
+                                                    <option selected="">Category</option>
+                                                    <option value="VINTAGE">Vintage-Nest</option>
+                                                    <option value="CLASSIC">Classic-Nest</option>
+                                                    <option value="EXECUTIVE">Executive-Nest</option>
+                                                    <option value="SUPER">Super-NesT</option>
+                                                    <option value="TWIN">Twin-Nest</option>
+                                                    <option value="ROYAL">Royal-Nest</option>
+                                                </select>
+                                            </div>
+                                        </li> -->
+                                        <!-- <li>
+                                            <div class="form-grp-two">
+                                                <input type="text" placeholder="group code">
+                                            </div>
+                                        </li>
+                                    </ul> -->
+                                    <button class="btn" type="submit">search & booking</button>
+                                </form>
+                                <div class="sidebar-bottom">
+                                    <ul>
+                                        <li><a href="{% url 'hotel:contact-us' %}">can we help?</a></li>
+                                        <li><a href="#">+234 8099888861 </a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- room-area-end -->
+
+            <!-- guest-area -->
+            <section class="guest-area guest-bg pt-115 pb-80">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title text-center mb-35">
+                                <span class="sub-title">Special Offers</span>
+                                <h2 class="title black-title">For Similar Rooms</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="stay-tab" data-bs-toggle="tab" data-bs-target="#stay"
+                                        type="button" role="tab" aria-controls="stay" aria-selected="true">STAY</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="dine-tab" data-bs-toggle="tab" data-bs-target="#dine" type="button"
+                                        role="tab" aria-controls="dine" aria-selected="false">DINE</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="stay" role="tabpanel" aria-labelledby="stay-tab">
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                                            <div class="guest-item">
+                                                <div class="guest-thumb">
+                                                    <a href="{% url 'hotel:RoomListView' %}"><img src="{% static 'hotel/assets/img/images/guest_img01.jpg' %}" alt="img"></a>
+                                                </div>
+                                                <div class="guest-content">
+                                                    <div class="rating">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <h2 class="title black-title"><a href="{% url 'hotel:RoomListView' %}">Royal Nest</a></h2>
+                                                        </li>
+                                                        <li><a href="#" class="price">-</a></li>
+                                                    </ul>
+                                                    <a href="{% url 'hotel:RoomListView' %}" class="book-now-btn">book now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                                            <div class="guest-item">
+                                                <div class="guest-thumb">
+                                                    <a href="{% url 'hotel:RoomListView' %}"><img src="{% static 'hotel/assets/img/images/our_supernest.jpg' %}" alt="img"></a>
+                                                </div>
+                                                <div class="guest-content">
+                                                    <div class="rating">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <h2 class="title black-title"><a href="{% url 'hotel:RoomListView' %}">Super Nest</a></h2>
+                                                        </li>
+                                                        <li><a href="#" class="price">-</a></li>
+                                                    </ul>
+                                                    <a href="{% url 'hotel:RoomListView' %}" class="book-now-btn">book now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                                            <div class="guest-item">
+                                                <div class="guest-thumb">
+                                                    <a href="{% url 'hotel:services' %}"><img src="{% static 'hotel/assets/img/images/our_twinnest.jpg' %}" alt="dinning"></a>
+                                                </div>
+                                                <div class="guest-content">
+                                                    <div class="rating">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <h2 class="title black-title"><a href="{% url 'hotel:services' %}">Twin Nest</a></h2>
+                                                        </li>
+                                                        <li><a href="#" class="price">-</a></li>
+                                                    </ul>
+                                                    <a href="{% url 'hotel:services' %}" class="book-now-btn">Book Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                                            <div class="guest-item">
+                                                <div class="guest-thumb">
+                                                    <a href="#"><img src="{% static 'hotel/assets/img/images/our_classicnest.jpg' %}" alt="img"></a>
+                                                </div>
+                                                <div class="guest-content">
+                                                    <div class="rating">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <h2 class="title black-title"><a href="{% url 'hotel:RoomListView' %}">Classic Nest</a></h2>
+                                                        </li>
+                                                        <li><a href="#" class="price">-</a></li>
+                                                    </ul>
+                                                    <a href="{% url 'hotel:RoomListView' %}" class="book-now-btn">book now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="dine" role="tabpanel" aria-labelledby="dine-tab">
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                                            <div class="guest-item">
+                                                <div class="guest-thumb">
+                                                    <a href="{% url 'hotel:RoomListView' %}"><img src="{% static 'hotel/assets/img/images/our_dining.jpg' %}" alt="twin"></a>
+                                                </div>
+                                                <div class="guest-content">
+                                                    <div class="rating">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <h2 class="title black-title"><a href="{% url 'hotel:RoomListView' %}">Our Dinning</a></h2>
+                                                        </li>
+                                                        <li><a href="#" class="price">-</a></li>
+                                                    </ul>
+                                                    <a href="{% url 'hotel:RoomListView' %}" class="book-now-btn">Explore</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                                            <div class="guest-item">
+                                                <div class="guest-thumb">
+                                                    <a href="{% url 'hotel:RoomListView' %}"><img src="{% static 'hotel/assets/img/images/our_somethingnice.jpg' %}" alt="executive"></a>
+                                                </div>
+                                                <div class="guest-content">
+                                                    <div class="rating">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <h2 class="title black-title"><a href="{% url 'hotel:RoomListView' %}">The Nest</a></h2>
+                                                        </li>
+                                                        <li><a href="#" class="price">-</a></li>
+                                                    </ul>
+                                                    <a href="{% url 'hotel:RoomListView' %}" class="book-now-btn">Explore</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                                            <div class="guest-item">
+                                                <div class="guest-thumb">
+                                                    <a href="#"><img src="{% static 'hotel/assets/img/images/our_somethingnice.jpg' %}" alt="img"></a>
+                                                </div>
+                                                <div class="guest-content">
+                                                    <div class="rating">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <h2 class="title black-title"><a href="{% url 'hotel:services'%}">Something Nice</a></h2>
+                                                        </li>
+                                                        <li><a href="#" class="price">-</a></li>
+                                                    </ul>
+                                                    <a href="{% url 'hotel:services'%}" class="book-now-btn">Explore</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                                            <div class="guest-item">
+                                                <div class="guest-thumb">
+                                                    <a href="#"><img src="{% static 'hotel/assets/img/images/our_paulazio.jpg' %}" alt="paulazio"></a>
+                                                </div>
+                                                <div class="guest-content">
+                                                    <div class="rating">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <h2 class="title black-title"><a href="#">Paulazzio</a></h2>
+                                                        </li>
+                                                        <li><a href="#" class="price">-</a></li>
+                                                    </ul>
+                                                    <a href="{% url 'hotel:services' %}" class="book-now-btn">Explore</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- guest-area-end -->
+
+        </main>
+        <!-- main-area-end -->
+
+<!-- Testing content -->
+<!-- <h1>{{room_category}}</h1>
+    <p>This is the room category</p>
+
+    <h2>Booking Form</h2>
+    <form action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+    </form> -->
+
+
+
+{% endblock about %}

@@ -1,0 +1,24 @@
+{% extends "users/login.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Successful Booking " %}{% endblock %}
+
+{% block content_form %}
+<div>
+  <ul>
+    <li><a href="{% url 'hotel:home' %}">Go back to home page</a></li>
+
+  </ul>
+</div>
+
+<h3 style: align='center'>{% trans "Your booking was successful" %}</h3><br />
+
+    <p>Here is your booking details:</p>
+<div>{{ booking }}</div>
+<button class=" btn btn-primary btn-block" type="" style="color: black;"><a href="{% url 'hotel:BookingListView' %}" style="color: white;">{% trans "Go to my bookings" %}</a> </button>
+    
+</body>
+
+
+{% endblock content_form %}
